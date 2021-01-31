@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5710213316535200845}
   - component: {fileID: 5967326498459576771}
   m_Layer: 0
-  m_Name: WallBlue
+  m_Name: WallOrange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f233c15da60cac47984722a7c6fd90d, type: 2}
+  - {fileID: 2100000, guid: ae82dc9d0d51a724187ee2afdccf2722, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - JumpSphere
+  - white
+  - purple
+  - red
+  - green
+  - blue
   layers:
   - Default
   - TransparentFX
