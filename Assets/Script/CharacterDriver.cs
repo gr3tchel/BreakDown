@@ -90,6 +90,7 @@ public class CharacterDriver : MonoBehaviour
 		}
 
 		this.isFirstPhysicsFrame = true;
+        print("Test vel" + this.characterController.velocity.normalized);
 	}
 
 	CharacterState MoveUpdate(CharacterState state, float deltaTime)
