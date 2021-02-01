@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
+    public GameObject loopSound;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class KeyScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Destroy(loopSound);
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<BoxCollider>().enabled = false;
             AudioSource audio = GetComponent<AudioSource>();
