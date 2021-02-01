@@ -22,6 +22,9 @@ public class KeyScript : MonoBehaviour
         if (other.tag == "Player")
         {
             GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
         }
     }
 }

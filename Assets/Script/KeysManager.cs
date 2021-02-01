@@ -59,9 +59,11 @@ public class KeysManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
-            int Index = Array.FindIndex(Keys, p => p.Name == other.tag );
-             Keys[Index].Owned = true;
+        if (other.tag == "red" || other.tag == "green" || other.tag == "blue" || other.tag == "purple" || other.tag == "white")
+        {
+            int Index = Array.FindIndex(Keys, p => p.Name == other.tag);
+            Keys[Index].Owned = true;
+        }
 
     }
 }

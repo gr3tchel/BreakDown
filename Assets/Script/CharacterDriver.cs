@@ -90,8 +90,23 @@ public class CharacterDriver : MonoBehaviour
 		}
 
 		this.isFirstPhysicsFrame = true;
-        print("Test vel" + this.characterController.velocity.normalized);
-	}
+
+        //  if (this.characterController.velocity.normalized != Vector3.zero);
+        if (Vector3.Distance(this.characterController.velocity.normalized, Vector3.zero) != 0)
+        {
+
+        }
+        else
+        {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+            // AudioSource audio = GetComponent<AudioSource>();
+            // audio.Stop();
+        }
+
+
+        //  print("Test vel" + this.characterController.velocity.normalized);
+    }
 
 	CharacterState MoveUpdate(CharacterState state, float deltaTime)
 	{
@@ -107,8 +122,9 @@ public class CharacterDriver : MonoBehaviour
         if (this.characterController.isGrounded && isTouchingJumpSphere && Input.GetButtonDown("Jump") && this.isFirstPhysicsFrame)
         {
 			currentState.velocity += -1f * Physics.gravity.normalized * this.CalculateJumpVerticalSpeed(this.jumpHeight);
-
-		}
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
+        }
 
 		if (this.characterController.isGrounded == false)
 		{

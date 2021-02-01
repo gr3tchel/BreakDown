@@ -10,6 +10,11 @@ TagManager:
   - red
   - green
   - blue
+  - RedLock
+  - WhiteLock
+  - PinkLock
+  - BlueLock
+  - GreenLock
   layers:
   - Default
   - TransparentFX
