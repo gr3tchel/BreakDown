@@ -13,6 +13,7 @@ public class MovingWallsManager : MonoBehaviour
     public GameObject[] TriggerJump;
     public GameObject[] White;
     public Key[] MyKeys;
+    public Material[] MyMat;
     public KeysManager myKeysManager;
 
     public float MySpeed = 1.0f;
@@ -172,6 +173,16 @@ public class MovingWallsManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R)&&other.tag== "RedLock" && MyKeys[1].Owned == true)
         {
+            //red
+            MyMat[0].color = new Color32 (195,56,56,255);
+            //viola
+            MyMat[1].color = new Color32(87, 56, 156,255);
+            //blu
+            MyMat[3].color = new Color32(33, 60, 85,255);
+            //pink
+            MyMat[2].color = new Color32(125, 50, 117,255);
+            //green
+            MyMat[4].color = new Color32(48, 126, 43,255);
             ClosePrevOpen();
             foreach (Wall w in movingRedDoors)
             {
@@ -182,7 +193,17 @@ public class MovingWallsManager : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.G) && other.tag == "GreenLock" && MyKeys[2].Owned == true)
             {
-                ClosePrevOpen();
+            //red
+                 MyMat[0].color = new Color32(128, 43, 43,255);
+            //viola
+            MyMat[1].color = new Color32(87, 56, 156, 255);
+            //blu
+            MyMat[3].color = new Color32(33, 60, 85, 255);
+            //pink
+            MyMat[2].color = new Color32(125, 50, 117, 255);
+            //green
+            MyMat[4].color = new Color32(99, 255, 90, 255);
+            ClosePrevOpen();
                 foreach (Wall w in movingGreenCubes)
                 {
                     SimpleWallAnim(movingGreenCubes, w, -MySpeed);
@@ -192,6 +213,16 @@ public class MovingWallsManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.B) && other.tag == "BlueLock" && MyKeys[3].Owned == true)
         {
+            //red
+            MyMat[0].color = new Color32(128, 43, 43, 255);
+            //viola
+            MyMat[1].color = new Color32(87, 56, 156, 255);
+            //blu
+            MyMat[3].color = new Color32(52, 97, 140, 255);
+            //pink
+            MyMat[2].color = new Color32(125, 50, 117, 255);
+            //green
+            MyMat[4].color = new Color32(48, 126, 43, 255);
             ClosePrevOpen();
             foreach (Wall w in movingWalls)
             {
@@ -200,8 +231,18 @@ public class MovingWallsManager : MonoBehaviour
             //PlayWallAnimation(movingRedDoors, 0, MySpeed);
         }
 
-        if (Input.GetKeyDown(KeyCode.P) && other.tag == "BlueLock" && MyKeys[4].Owned == true)
+        if (Input.GetKeyDown(KeyCode.P) && other.tag == "PinkLock" && MyKeys[4].Owned == true)
         {
+            //red
+            MyMat[0].color = new Color32(128, 43, 43, 255);
+            //viola
+            MyMat[1].color = new Color32(87, 56, 156, 255);
+            //blu
+            MyMat[3].color = new Color32(33, 60, 85, 255);
+            //pink
+            MyMat[2].color = new Color32(185, 71, 172, 255);
+            //green
+            MyMat[4].color = new Color32(48, 126, 43, 255);
             ClosePrevOpen();
             foreach (Wall w in movingTriggerJump)
             {
